@@ -90,6 +90,13 @@ Note - Sure fire plugin should be mentioned in POM.xml to run test cases from co
 	   If we directly give mvn test by default maven execute mvn clean and mvn compile before mvn test
 	   If we have multiple test runner for multiple features then we can execute all the test runners by using mvn test
 	   
+26. To integrate project to jenkins
+	1.Create freestyle project
+	2.Under Source Code Management provide git info
+	3.Under Build select - Invoke top level maven project->select maven version and in goals give test
+	4.Under Post_Build actions give xml file path ex- target/cukes.xml
+	After successfull run report will generate and we can access it by clicking on Latest Test result link
+	   
 	   
 
 

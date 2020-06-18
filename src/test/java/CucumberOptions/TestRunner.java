@@ -14,7 +14,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 					glue = {"StepDefinations_POM"},
 //					dryRun = true,
 					plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json", "junit:target/cukes.xml" },
-					tags = "@Smoke",
+//					tags = "@Smoke",
 					monochrome = true,
 					strict = true
 				)
