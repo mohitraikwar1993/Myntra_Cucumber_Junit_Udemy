@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="41.483">
+<testcase classname="Verify login functionality of Myntra" name="Verify login page is displayed" time="40.856">
+<system-out><![CDATA[Given user is on landing page...............................................passed
+When user click on profile..................................................passed
+And user click on login link................................................passed
+Then user is on login page..................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

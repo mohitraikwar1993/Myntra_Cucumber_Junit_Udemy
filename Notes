@@ -1,0 +1,100 @@
+1. Eclipse with java development
+2. Natural plugin
+3. Cucumber project skeleton can be obtain by maven
+4. Cucumber supports quick start template
+5. POM.xml needs cucumber-java and cucumber-junit
+6. Step defination file matched with tag name and description
+7. There should be one mapping implementation for each gherkin line
+8. Pretty Gherkin plugin to generate step defination file.
+9. Cucumber options in test runner : Feature path and glue for step        defination.
+10. Regular expression for diff data but same implementation.
+11. Arguments should match with regular expression catch values.
+12. When there are many argumnets it is suggested to use Data Table
+13. Controlling test case execution using tagging.
+14. Background keyword can be a common prerequiste to all scenarios in     feature file.
+15. Hooks can be use to execute something before and after
+	ex- @Before("@Smoke")
+16. Hooks and Background can not be used together.
+18. Hook should be defined in step defination package.
+17. Scenario outline is used if we want to parameterized the test with     multiple data
+
+----------------Attributes of Cucumber Options------------------------------------
+18. To generate reports
+	@CucumberOptions(
+					features = "src/test/java/Features/Login_Hook.feature",
+					glue = {"StepDefinations_POM"},
+					plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json", "junit:target/cukes.xml" }
+		
+				)
+
+19. dryRun option can either set as true or false. If it is set as true, it means that Cucumber will only checks that 
+	every Step mentioned in the Feature File have corresponding code written in Step Definition file or not. So in case 
+	any of the function is missed in the Step Definition for any Step in Feature File, it will give us the message. 
+	For eg. in the following example we have set 'dryRun=True':
+	@CucumberOptions(
+					features = "src/test/java/Features/Login_Hook.feature",
+					glue = {"StepDefinations_POM"},
+					dryRun = true,
+					plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json", "junit:target/cukes.xml" },
+					tags = "@Regression"
+				)
+				
+20. To execute scenarios on the basis fo tags
+	@CucumberOptions(
+					features = "src/test/java/Features/Login_Hook.feature",
+					glue = {"StepDefinations_POM"},
+					plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json", "junit:target/cukes.xml" },
+					tags = "@Regression"
+				)
+				
+				
+21. To generate a neat output without special characters use monochrome=true in cucumber options
+	@CucumberOptions(
+					features = "src/test/java/Features/Login_Hook.feature",
+					glue = {"StepDefinations_POM"},
+					plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json", "junit:target/cukes.xml" },
+					tags = "@Regression",
+					monochrome = true
+				)
+22. If some implementation is missing or not defined and we want to fail the test in that case we can use strict = true
+	Note - Deprecated.  will be removed and cucumber will default to strict
+	Returns:true if undefined and pending steps should be treated aserrors.
+	
+	@CucumberOptions(
+					features = "src/test/java/Features/Login_Hook.feature",
+					glue = {"StepDefinations_POM"},
+					plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json", "junit:target/cukes.xml" },
+					tags = "@Regression",
+					monochrome = true,
+					strict = true
+				)
+				
+				
+------------------------------Maven Commonds-------------------------
+23. To clean temprory files
+		mvn clean 
+		
+24. To check syntax errors in code 
+		mvn complie
+		
+25. To trigger execution
+		mvn test
+		
+Note - Sure fire plugin should be mentioned in POM.xml to run test cases from command line
+	   <plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+ 				 <artifactId>maven-surefire-plugin</artifactId>
+				 <version>3.0.0-M4</version>	
+      </plugin>
+      
+	   If we directly give mvn test by default maven execute mvn clean and mvn compile before mvn test
+	   If we have multiple test runner for multiple features then we can execute all the test runners by using mvn test
+	   
+	   
+
+
+
+
+				
+
+				

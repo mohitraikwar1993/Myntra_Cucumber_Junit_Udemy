@@ -1,0 +1,99 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-17T18:12:12.559Z",
+        "before": [
+          {
+            "result": {
+              "duration": 26663000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinations_POM.Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verify login page is displayed",
+        "description": "",
+        "id": "verify-login-functionality-of-myntra;verify-login-page-is-displayed",
+        "after": [
+          {
+            "result": {
+              "duration": 2554000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinations_POM.Hooks.closeBrowser(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 257000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on landing page",
+            "match": {
+              "location": "StepDefinations_POM.StepDef_POM.user_is_on_landing_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 689000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user click on profile",
+            "match": {
+              "location": "StepDefinations_POM.StepDef_POM.user_click_on_profile()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8877000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user click on login link",
+            "match": {
+              "location": "StepDefinations_POM.StepDef_POM.user_click_on_login_link()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1634000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is on login page",
+            "match": {
+              "location": "StepDefinations_POM.StepDef_POM.user_is_on_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Verify login functionality of Myntra",
+    "description": "",
+    "id": "verify-login-functionality-of-myntra",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/Login_Hook.feature",
+    "tags": []
+  }
+]
